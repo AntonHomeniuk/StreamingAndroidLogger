@@ -17,6 +17,6 @@ function refresh() {
 function refreshView(messages) {
 
     for (var message in messages) {
-         $(".container").prepend(messages[message].time + ": " + messages[message].message +" <br/>");
+         $(".container").prepend("<pre>" + messages[message].message +"</pre>");
     }
 }
