@@ -3,7 +3,7 @@ $(document).ready(function () {
     setInterval(refresh, interval)
 });
 
-var interval = 1000;
+var interval = 2000;
 
 function refresh() {
 
@@ -15,8 +15,11 @@ function refresh() {
 }
 
 function refreshView(messages) {
-
+    var $textarea = $('#content');
     for (var message in messages) {
-         $(".container").prepend("<pre>" + messages[message].message +"</pre>");
+        $textarea.val(function(i, text) {
+            return text + "<pre>" + messages[message].message +"</pre>";
+        });
     }
+    $textarea.scrollTop($textarea[0].scrollHeight);
 }
