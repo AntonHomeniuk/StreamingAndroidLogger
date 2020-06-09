@@ -85,7 +85,7 @@ public class LoggingWebServer implements Runnable {
         if (isRunning)
             return;
 
-        Log.i(TAG, openBrowserMessage(8080));
+        Log.i(TAG, openBrowserMessage(port));
 
         isRunning = true;
         new Thread(this).start();
