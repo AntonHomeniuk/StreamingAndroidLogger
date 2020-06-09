@@ -18,7 +18,7 @@ function refreshView(messages) {
     var $textarea = $('#content');
     for (var message in messages) {
         $textarea.val(function(i, text) {
-            return text + "<pre>" + messages[message].message +"</pre>";
+            return text + messages[message].message + "\n";
         });
     }
     $textarea.scrollTop($textarea[0].scrollHeight);
