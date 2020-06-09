@@ -20,6 +20,6 @@ function refreshView(messages) {
         $textarea.val(function(i, text) {
             return text + messages[message].message + "\n";
         });
+        $textarea.scrollTop($textarea[0].scrollHeight);
     }
-    $textarea.scrollTop($textarea[0].scrollHeight);
 }
