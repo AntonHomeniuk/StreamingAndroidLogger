@@ -10,7 +10,7 @@ import net.kibotu.server.ResponseMessage
 class WebLogger : ILogger {
 
     override fun debug(tag: String, message: String) {
-        LoggingWebServer.queue.add(ResponseMessage("$tag.D $message"))
+        LoggingWebServer.queue.add(ResponseMessage("$message"))
     }
 
     override fun verbose(tag: String, message: String) {
